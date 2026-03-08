@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Market Simulator</title>
+    <script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/@sjmc11/tourguidejs/dist/css/tour.min.css" />
+    <script src="https://unpkg.com/@sjmc11/tourguidejs/dist/tour.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>    
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row" style="display: flex">
+            <div class="col-md-12">
+                <div id="crypto-reactor">
+                    <div class="reactor-header sim-header">
+                        <h3><i class="fas fa-rocket"></i> Crypto Market Simulator</h3>
+
+                        <div class="simulator-description">
+                            Simulate how crypto markets react to events. Trigger events and watch price and
+                            sentiment
+                            change in real time.
+                        </div>
+                        <div class="reactor-stats">
+                            <div class="stat tool--tip">Price <span id="price">$42000</span>
+                                <span class="tooltiptext">Current market price of the cryptocurrency.</span>
+                            </div>
+                            <div class="stat tool--tip">Sentiment <span id="sentiment">Neutral</span>
+                                <span class="tooltiptext">Overall market mood: Bullish (positive), Bearish
+                                    (negative),
+                                    or Neutral.</span>
+                            </div>
+                            <div class="stat tool--tip">Funding <span id="funding">0.01%</span>
+                                <span class="tooltiptext">Funding rate for perpetual futures, indicates bullish or
+                                    bearish bias.</span>
+                            </div>
+                            <div class="stat tool--tip">Open Interest <span id="oi">$2.1B</span>
+                                <span class="tooltiptext">Total value of outstanding futures contracts.</span>
+                            </div>
+                            <div class="stat tool--tip">Liquidations <span id="liq">$0</span>
+                                <span class="tooltiptext">Value of positions forcefully closed due to margin
+                                    calls.</span>
+                            </div>
+                            <div class="stat tool--tip">Volume <span id="volume">$0</span>
+                                <span class="tooltiptext">Trading volume in the recent period.</span>
+                            </div>
+                            <div class="stat tool--tip">Volatility <span id="volatility">Medium</span>
+                                <span class="tooltiptext">Measure of price fluctuations.</span>
+                            </div>
+                            <div class="stat tool--tip">Market Cap <span id="marketCap">$800B</span>
+                                <span class="tooltiptext">Total market value of the cryptocurrency.</span>
+                            </div>
+                            <div class="stat tool--tip">Dominance <span id="dominance">50%</span>
+                                <span class="tooltiptext">Market share of this crypto relative to the entire
+                                    market.</span>
+                            </div>
+                            <div class="stat tool--tip">Level <span id="level">1</span>
+                                <span class="tooltiptext">Your trader level based on experience points.</span>
+                            </div>
+                            <div class="stat tool--tip">XP <span id="xp">0/100</span>
+                                <span class="tooltiptext">Experience points to level up.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reactor-grid">
+                        <div class="events-left sim-events-bull">
+                            <h4>Bullish Events</h4>
+                            <div class="event-buttons">
+                                <button class="bull tool--tip" onclick="eventFire('etf')">ETF Approved
+                                    <span class="tooltiptext">Simulates approval of a crypto ETF, boosting
+                                        institutional
+                                        investment and price.</span></button>
+                                <button class="bull tool--tip" onclick="eventFire('adoption')">Corporate Adoption
+                                    <span class="tooltiptext">A major company starts using crypto, increasing
+                                        demand.</span></button>
+                                <button class="bull tool--tip" onclick="eventFire('whaleBuy')">Whale Buying
+                                    <span class="tooltiptext">Large investors buy heavily, driving up
+                                        prices.</span></button>
+                                <button class="bull tool--tip" onclick="eventFire('halving')">Bitcoin Halving
+                                    <span class="tooltiptext">Supply reduction event, often leading to price
+                                        increases.</span></button>
+                                <button class="bull tool--tip" onclick="eventFire('regulation')">Positive Regulation
+                                    <span class="tooltiptext">Favorable laws or rules boost
+                                        confidence.</span></button>
+                                <button class="bull tool--tip" onclick="eventFire('partnership')">Major Partnership
+                                    <span class="tooltiptext">Strategic alliance that enhances
+                                        value.</span></button>
+                                <button class="bull tool--tip" onclick="eventFire('upgrade')">Network Upgrade
+                                    <span class="tooltiptext">Improvements to the blockchain increase efficiency and
+                                        appeal.</span></button>
+                                <button class="bull tool--tip" onclick="eventFire('listing')">Exchange Listing
+                                    <span class="tooltiptext">Listing on a major exchange increases
+                                        accessibility.</span></button>
+                                <button class="bull tool--tip" onclick="eventFire('fomo')">Retail FOMO
+                                    <span class="tooltiptext">Fear of missing out drives retail buying
+                                        frenzy.</span></button>
+                                <button class="bull tool--tip" onclick="eventFire('pump')">Meme Pump
+                                    <span class="tooltiptext">Social media hype causes rapid price
+                                        surge.</span></button>
+                            </div>
+                        </div>
+                        <div class="chart-box sim-chart">
+                            <div id="chart"></div>
+                            <div id="volume-chart"></div>
+                            <div id="sentiment-chart"></div>
+                        </div>
+                        <div class="events-right sim-events-bear">
+                            <h4>Bearish Events</h4>
+                            <div class="event-buttons">
+                                <button class="bear tool--tip" onclick="eventFire('hack')">Exchange Hack
+                                    <span class="tooltiptext">Security breach causes panic selling.</span></button>
+                                <button class="bear tool--tip" onclick="eventFire('ban')">Government Ban
+                                    <span class="tooltiptext">Regulatory crackdown suppresses
+                                        market.</span></button>
+                                <button class="bear tool--tip" onclick="eventFire('liquidation')">Liquidation
+                                    Cascade
+                                    <span class="tooltiptext">Chain reaction of forced sales drops
+                                        prices.</span></button>
+                                <button class="bear tool--tip" onclick="eventFire('scam')">Major Scam Exposed
+                                    <span class="tooltiptext">Fraud revelation erodes trust.</span></button>
+                                <button class="bear tool--tip" onclick="eventFire('downgrade')">Network Issue
+                                    <span class="tooltiptext">Technical problems cause uncertainty.</span></button>
+                                <button class="bear tool--tip" onclick="eventFire('delisting')">Exchange Delisting
+                                    <span class="tooltiptext">Removal from exchange reduces
+                                        liquidity.</span></button>
+                                <button class="bear tool--tip" onclick="eventFire('whaleSell')">Whale Selling
+                                    <span class="tooltiptext">Large investors sell off, pressuring prices
+                                        down.</span></button>
+                                <button class="bear tool--tip" onclick="eventFire('recession')">Economic Recession
+                                    <span class="tooltiptext">Broader economic downturn affects risk
+                                        assets.</span></button>
+                                <button class="bear tool--tip" onclick="eventFire('fud')">Heavy FUD Campaign
+                                    <span class="tooltiptext">Fear, uncertainty, doubt spreads
+                                        negativity.</span></button>
+                                <button class="bear tool--tip" onclick="eventFire('dump')">Flash Dump
+                                    <span class="tooltiptext">Sudden large sell-off crashes price.</span></button>
+                            </div>
+                        </div>
+
+                        <div class="events-left sim-neutral-controls" style="grid-column: 1; margin-top: 20px;">
+                            <h4>Neutral Events</h4>
+                            <div class="event-buttons">
+                                <button class="neutral tool--tip" onclick="eventFire('volSpike')">Volatility Spike
+                                    <span class="tooltiptext">Increases market fluctuations.</span></button>
+                                <button class="neutral tool--tip" onclick="eventFire('newsNeutral')">Neutral News
+                                    <span class="tooltiptext">Non-impactful news update.</span></button>
+                                <button class="neutral tool--tip" onclick="eventFire('sideways')">Force Sideways
+                                    <span class="tooltiptext">Stabilizes market into range-bound
+                                        trading.</span></button>
+                                <button class="neutral tool--tip" onclick="speedUp(2)">Speed x2
+                                    <span class="tooltiptext">Doubles simulation speed.</span></button>
+                                <button class="neutral tool--tip" onclick="speedUp(0.5)">Speed x0.5
+                                    <span class="tooltiptext">Halves simulation speed.</span></button>
+                                <button class="neutral tool--tip" onclick="pauseSim()">Pause
+                                    <span class="tooltiptext">Pauses the simulation.</span></button>
+                                <button class="neutral tool--tip" onclick="resumeSim()">Resume
+                                    <span class="tooltiptext">Resumes the simulation.</span></button>
+                                <button class="neutral tool--tip" onclick="resetSim()">Reset
+                                    <span class="tooltiptext">Resets all parameters to default.</span></button>
+                                <button class="neutral tool--tip" onclick="saveState()">Save State
+                                    <span class="tooltiptext">Saves current market state.</span></button>
+                                <button class="neutral tool--tip" onclick="loadState()">Load State
+                                    <span class="tooltiptext">Loads previously saved state.</span></button>
+                            </div>
+                        </div>
+                        <div class="side-panel sim-market-data">
+                            <div class="panel">
+                                <h4>Order Flow</h4>
+                                Buy Pressure
+                                <div class="flow green">
+                                    <div id="buyFlow"></div>
+                                </div>
+                                Sell Pressure
+                                <div class="flow red">
+                                    <div id="sellFlow"></div>
+                                </div>
+                            </div>
+
+                            <div class="panel panel-parent">
+                                <div class="panel panel-child">
+                                    <h4>Market Actors</h4>
+                                    <div id="actors"></div>
+                                </div>
+
+                                <div class="panel panel-child">
+                                    <h4>Market News</h4>
+                                    <div id="news"></div>
+                                </div>
+                            </div>
+                            <div class="panel panel-parent">
+
+                                <div class="panel panel-child">
+                                    <h4>Achievements & Badges</h4>
+                                    <div id="achievements"></div>
+                                </div>
+                                <div class="panel panel-child">
+                                    <h4>Activity Log</h4>
+                                    <div id="log" class="log"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="events-right sim-god-mode" style="grid-column: 3; margin-top: 20px;">
+                            <h4>GOD Mode Controls</h4>
+                            <div class="event-buttons">
+                                <button class="god" onclick="godCheat('maxLevel')">Max Level</button>
+                                <button class="god" onclick="godCheat('infiniteOI')">Infinite OI</button>
+                                <button class="god" onclick="godCheat('zeroLiq')">No Liquidations</button>
+                                <button class="god" onclick="godCheat('bullMarket')">Force Bull Market</button>
+                                <button class="god" onclick="godCheat('bearMarket')">Force Bear Market</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/simulator.js"></script>
+
+</html>
