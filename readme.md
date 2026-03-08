@@ -145,7 +145,7 @@ Your support helps the project grow.
 
 # 📈 Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=tauseedzaman/crypto-market-simulator\&type=Date)](https://star-history.com/#tauseedzaman/crypto-market-simulator&Date)
+[![Star History Chart](https://api.star-history.com/image?repos=tauseedzaman/crypto-market-simulator&type=date&legend=top-left)](https://www.star-history.com/?repos=tauseedzaman%2Fcrypto-market-simulator&type=date&legend=top-left)
 
 ---
 
